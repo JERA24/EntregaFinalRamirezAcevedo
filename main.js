@@ -34,6 +34,7 @@ let resultado = (numero * porcentaje) / 100;
 
 alert(`Gracias a tu cupon de ${porcentaje}% , a tu total de ${numero} $ se le descuenta ${resultado} $`);
 
+//Moneda con la que va a pagar
 let compra= prompt("Ingrese con que moneda vas a pagar").toUpperCase()
 
 switch(compra){
@@ -51,6 +52,7 @@ switch(compra){
         break;
 }
 
+//Listado solo para usuarios prime
 let usuario = prompt("Si pagas el listado prime por favor ingrese el usuario").toUpperCase();
 
 while (usuario != "JUAN"){
@@ -61,7 +63,7 @@ while (usuario != "JUAN"){
 
 alert("Bienvenido");
 
-
+//Reservas de mesa solo para usuarios prime
 for(let mesa = 1; mesa <= 2; mesa++){
     let nombre= prompt("Al tener prime podes reservar hasta 2 mesas en nuestras instalaciones, por favor ingrese un nombre:");
 
@@ -70,6 +72,7 @@ for(let mesa = 1; mesa <= 2; mesa++){
 
 };
 
+//Calculadora para no salir de la pagina
 function calculadora(numUno, numDos, operacion){
     switch (operacion){
         case "+":
