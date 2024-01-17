@@ -51,6 +51,46 @@ switch(compra){
         break;
 }
 
+let usuario = prompt("Si pagas el listado prime por favor ingrese el usuario").toUpperCase();
+
+while (usuario != "JUAN"){
+    alert("Usuario incorrecto");
+
+    usuario= prompt("Ingrese el usuario").toUpperCase();
+}
+
+alert("Bienvenido");
+
+
+for(let mesa = 1; mesa <= 2; mesa++){
+    let nombre= prompt("Al tener prime podes reservar hasta 2 mesas en nuestras instalaciones, por favor ingrese un nombre:");
+
+
+    alert(`Mesa #${mesa} reservado para ${nombre}`);
+
+};
+
+function calculadora(numUno, numDos, operacion){
+    switch (operacion){
+        case "+":
+            return numUno + numDos;
+        case "-":
+            return numUno - numDos;
+        case "*":
+            return numUno * numDos;   
+        case "/":
+            return numUno / numDos;                             
+    }
+}
+
+let numeroUno = Number(prompt("Te facilitamos una calculadora para ti, ingrese un numero:"));
+let operacion = prompt("Ingrese la operacion a realizar");
+let numeroDos = Number(prompt("ingrese otro numero:"));
+let total = calculadora (numeroUno, numeroDos, operacion);
+
+alert(`${numeroUno} ${operacion} ${numeroDos} = ${total}`);
+
+
 
 
 
