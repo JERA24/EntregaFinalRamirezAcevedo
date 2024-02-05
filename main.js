@@ -98,11 +98,11 @@ function filtrarPorPrecioMaximo(precioMaximo) {
 }
 
 // precio máximo
-let precioMaximo = prompt("Ingresa el precio máximo para filtrar las bebidas:");
-alert("Precio máximo ingresado:", precioMaximo);
+let precioMaximo = prompt("Ingresa el precio máximo de la bebida que quieras comprar:");
+alert("Precio máximo ingresado", precioMaximo);
 let bebidasFiltradasPorPrecio = filtrarPorPrecioMaximo(precioMaximo);
 if (bebidasFiltradasPorPrecio.length > 0) {
-    alert("Bebidas filtradas por precio máximo:");
+    alert("Bebidas:");
     bebidasFiltradasPorPrecio.forEach(bebida => {
         alert(bebida.nombre);
     });
