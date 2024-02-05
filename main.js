@@ -4,7 +4,7 @@ alert ("Hola " + nombres + " bienvenido a nuestra pagina");
 
 //Verificacion de edad para poder ingresar
 while (true) {
-    var edad = prompt("Por favor, ingresa tu edad:");
+    let edad = prompt("Por favor, ingresa tu edad:");
 
     if (edad >= 18) {
         alert("¡Bienvenido! por favor relajate y elije lo que quieras beber");
@@ -15,9 +15,11 @@ while (true) {
 }
 
 // fun bebidas
-function Bebida(nombre, precio) {
-    this.nombre = nombre;
-    this.precio = precio;
+class Bebida {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
 }
 
 // bebidas
@@ -27,9 +29,9 @@ const listaBebidas = [
     new Bebida('Gancia', 6500),
     new Bebida('Whisky', 25000),
     new Bebida('Fernet', 7500),
-    new Bebida('Ron', 8000),
+    new Bebida('Ron', 12000),
     new Bebida('Cerveza', 2450),
-    new Bebida('Tequila', 2000),
+    new Bebida('Tequila', 17000),
     new Bebida('Champagne', 7200),
     new Bebida('Jagger', 15000),
     new Bebida('Gin', 19000),
@@ -90,6 +92,24 @@ function mostrarCarrito() {
       }
 }
 
+// filtrar 
+function filtrarPorPrecioMaximo(precioMaximo) {
+    return listaBebidas.filter(bebida => bebida.precio <= precioMaximo);
+}
+
+// precio máximo
+let precioMaximo = prompt("Ingresa el precio máximo para filtrar las bebidas:");
+alert("Precio máximo ingresado:", precioMaximo);
+let bebidasFiltradasPorPrecio = filtrarPorPrecioMaximo(precioMaximo);
+if (bebidasFiltradasPorPrecio.length > 0) {
+    alert("Bebidas filtradas por precio máximo:");
+    bebidasFiltradasPorPrecio.forEach(bebida => {
+        alert(bebida.nombre);
+    });
+} else {
+    alert("No hay bebidas que cumplan con el precio máximo ingresado.");
+}
+
 //  agregar bebidas
 let agregarOtraBebida = true;
 while (agregarOtraBebida) {
@@ -104,7 +124,6 @@ while (agregarOtraBebida) {
 
 // contenido final del carrito y total de compra
 mostrarCarrito();
-
 
 //Listado solo para usuarios prime
 let usuario = prompt("Si pagas el listado prime por favor ingrese el usuario").toUpperCase();
