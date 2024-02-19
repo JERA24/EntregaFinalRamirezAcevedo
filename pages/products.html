@@ -10,63 +10,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit:wght@200&family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>Don Arnulfo</title>
+    <link rel="stylesheet" href="../style.css">
+    <title></title>
+    <title>Don Arnulfo Products</title>
 </head>
 
 <body>
     <header class="main_header">
         <nav class="navbar navbar-expand-lg sticky-top padding-left-1">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">
+                <a class="navbar-brand" href="../index.html">
                     <img class="head_logo_img"
-                        src="./img/logo arnulfo.png"
-                        alt="Logo de la empresa" /></a>
+                        src="../img/logo arnulfo.png"
+                        alt="Logo de la empresa"/></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
     <section class="main_principal">
-    <h1>Bienvenidos a Don Arnulfo</h1>
-    <p>La noche esta ideal para una cerveza, hacé tu pedido!</p>
-    <button id="newClient" class="new-client">New Order</button>
+    <h1>Nuestros productos</h1>
+    <main id="allProducts"></main>
     </section>
-
     <footer class="main_footer container-fluid d-flex flex-wrap justify-content-center align-items-center py-3 my-8">
         <h2 class="main_title">Seguínos en nuestras redes</h2>
         <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
             <li class="ms-3"><a class="text-muted" href="#" target="_blank">
-                    <img width="28" height="28" class="icon-280 bi bi-instagram" src="./img/instagram.png"
+                    <img width="28" height="28" class="icon-280 bi bi-instagram" src="../img/instagram.png"
                         alt="Instagram" />
                 </a>
             </li>
             <li class="ms-3"><a class="text-muted" href="#" target="_blank">
-                    <img width="28" height="28" class="icon-280 bi bi-facebook" src="./img/facebook.png"
+                    <img width="28" height="28" class="icon-280 bi bi-facebook" src="../img/facebook.png"
                         alt="Facebook" />
                 </a>
             </li>
         </ul>
         <div class="col-md-4 d-flex align-content-center">
             <a href="#" class="m-0 text-muted text-decoration-none 1h-1 pt-md-2">
-                <img src="./img/logo arnulfo.png" alt="Logo de la empresa" width="100%"/>
+                <img src="../img/logo arnulfo.png" alt="Logo de la empresa" width="50%" />
             </a>
         </div>
         <div>
             <span class="col-md-6 text-muted resize pt-md-5">© 2023 Company, Inc</span>
         </div>
     </footer>
-
-    <script src="./js/orderManager.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/orderManager.js"></script>
+    <script src="../js/productManager.js"></script>
 </body>
+
 </html>
